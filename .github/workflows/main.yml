@@ -29,3 +29,12 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: build
         run: yarn build
+
+      - name: remove old folder
+        run: rm -rf ~/workspace/runner-build
+
+      - name: create new build folder
+        run: mkdir ~/workspace/runner-build
+
+      - name: move new build
+        run: mv build ~/workspace/runner-build
